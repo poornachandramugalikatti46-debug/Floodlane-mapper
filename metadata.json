@@ -1,0 +1,6 @@
+{
+  "name": "FloodLane Mapper",
+  "description": "Community-driven urban flood risk mapping, drainage sketching, and disaster-management GIS platform for Indian urban settlements.",
+  "requestFramePermissions": ["geolocation", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

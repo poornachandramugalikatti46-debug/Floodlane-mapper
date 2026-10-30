@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@layer base {
+  :root {
+    --font-display: "Plus Jakarta Sans", "Noto Sans Kannada", "Noto Sans Devanagari", system-ui, sans-serif;
+    --font-sans: "Public Sans", "Noto Sans Kannada", "Noto Sans Devanagari", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #f8fafc;
+    color: #0f172a;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono, .tabular-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Senior / Low-Literacy Accessible Large Text Scale */
+html.accessible-large-text {
+  font-size: 112.5%;
+}
+
+/* High Contrast Accessibility Mode */
+html.accessible-high-contrast body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+html.accessible-high-contrast .border-slate-200 {
+  border-color: #334155;
+}
+
+/* Leaflet map container overrides for crisp UI layering */
+.leaflet-container {
+  font-family: var(--font-sans);
+  z-index: 10;
+  background: #e2e8f0;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.18);
+  border: 1px solid #cbd5e1;
+  padding: 0;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px;
+  line-height: 1.45;
+}
+
+.custom-gis-icon {
+  background: transparent;
+  border: none;
+}
